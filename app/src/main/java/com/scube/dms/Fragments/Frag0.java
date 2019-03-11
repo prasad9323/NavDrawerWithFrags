@@ -9,15 +9,15 @@ import android.view.ViewGroup;
 
 import com.scube.dms.R;
 
-public class Frag6 extends Fragment {
-    public Frag6() {
+public class Frag0 extends Fragment {
+    public Frag0() {
         // Required empty public constructor
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_frag2, container, false);
+        return inflater.inflate(R.layout.frag_layout_0, container, false);
     }
 
     @Override

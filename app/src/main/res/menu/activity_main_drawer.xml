@@ -6,34 +6,34 @@
         <item
             android:id="@+id/nav_internal_storage"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="Frag 0" />
         <item
             android:id="@+id/nav_external_storage"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Frag 1" />
         <item
             android:id="@+id/nav_images"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Frag 2" />
         <item
             android:id="@+id/nav_audios"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Frag 3" />
         <item
             android:id="@+id/nav_videos"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Frag 4" />
     </group>
     <item android:title="Communicate">
         <menu>
             <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Frag 5" />
+            <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
-            <item
-                android:id="@+id/nav_settings"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
         </menu>
     </item>
 </menu>

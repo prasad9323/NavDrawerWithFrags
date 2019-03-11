@@ -1,4 +1,5 @@
 package com.scube.dms;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,23 +18,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.scube.dms.Fragments.Frag0;
 import com.scube.dms.Fragments.Frag1;
 import com.scube.dms.Fragments.Frag2;
 import com.scube.dms.Fragments.Frag3;
 import com.scube.dms.Fragments.Frag4;
 import com.scube.dms.Fragments.Frag5;
-import com.scube.dms.Fragments.Frag6;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private String[] activityTitles;
-    private static final String TAG_INTERNAL_STORAGE = "INTERNAL STORAGE";
-    private static final String TAG_EXTERNAL_STORAGE = "EXTERNAL STORAGE";
-    private static final String TAG_IMAGES_LIST = "IMAGES";
-    private static final String TAG_AUDIOS_LIST = "AUDIOS";
-    private static final String TAG_VIDEOS_LIST = "VIDEOS";
-    private static final String TAG_SETTINGS = "SETTINGS";
-    public static String FG_TAG = TAG_INTERNAL_STORAGE;
+    private static final String TAG_FRAG_0 = "Frag 0";
+    private static final String TAG_FRAG_1 = "Frag 1";
+    private static final String TAG_FRAG_2 = "Frag 2";
+    private static final String TAG_FRAG_3 = "Frag 3";
+    private static final String TAG_FRAG_4 = "Frag 4";
+    private static final String TAG_FRAG_5 = "Frag 5";
+    public static String FG_TAG = TAG_FRAG_0;
     private DrawerLayout drawer;
     private Handler mHandler;
     public static int navItemIndex = 0;
@@ -72,6 +73,13 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        setMainFrag();
+    }
+
+    private void setMainFrag() {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frame, new Frag0(), FG_TAG);
+        fragmentTransaction.commitAllowingStateLoss();
     }
 
     private void loadHomeFragment() {
@@ -89,8 +97,7 @@ public class MainActivity extends AppCompatActivity
                 Fragment fragment = getHomeFragment();
                 if (fragment != null) {
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,
-                            android.R.anim.fade_out);
+//                    fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
                     fragmentTransaction.replace(R.id.frame, fragment, FG_TAG);
                     fragmentTransaction.commitAllowingStateLoss();
                 } else {
@@ -107,19 +114,19 @@ public class MainActivity extends AppCompatActivity
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
             case 0:
-                return new Frag1();
+                return new Frag0();
             case 1:
-                return new Frag2();
-            case 2:
-                return new Frag3();
-            case 3:
-                return new Frag4();
-            case 4:
-                return new Frag5();
-            case 5:
-                return new Frag6();
-            default:
                 return new Frag1();
+            case 2:
+                return new Frag2();
+            case 3:
+                return new Frag3();
+            case 4:
+                return new Frag4();
+            case 5:
+                return new Frag5();
+            default:
+                return new Frag0();
         }
     }
 
@@ -166,23 +173,23 @@ public class MainActivity extends AppCompatActivity
         switch (id) {
             case R.id.nav_internal_storage:
                 navItemIndex = 0;
-                FG_TAG = TAG_INTERNAL_STORAGE;
+                FG_TAG = TAG_FRAG_0;
                 break;
             case R.id.nav_external_storage:
                 navItemIndex = 1;
-                FG_TAG = TAG_EXTERNAL_STORAGE;
+                FG_TAG = TAG_FRAG_1;
                 break;
             case R.id.nav_images:
                 navItemIndex = 2;
-                FG_TAG = TAG_IMAGES_LIST;
+                FG_TAG = TAG_FRAG_2;
                 break;
             case R.id.nav_audios:
                 navItemIndex = 3;
-                FG_TAG = TAG_AUDIOS_LIST;
+                FG_TAG = TAG_FRAG_3;
                 break;
             case R.id.nav_videos:
                 navItemIndex = 4;
-                FG_TAG = TAG_VIDEOS_LIST;
+                FG_TAG = TAG_FRAG_4;
                 break;
             case R.id.nav_share:
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
@@ -193,7 +200,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_settings:
                 navItemIndex = 5;
-                FG_TAG = TAG_SETTINGS;
+                FG_TAG = TAG_FRAG_5;
                 break;
         }
 //        removeFragment();

@@ -1,4 +1,5 @@
 package com.scube.dms;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,17 +16,12 @@ public class SplashScreen extends AppCompatActivity {
         runAfterDelay(2);
     }
 
-    /**
-     * Check if user is logged in, if yes then redirect to main activity, else redirect to login screen
-     *
-     * @param i splash screen delay
-     */
     private void runAfterDelay(int i) {
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(mContext, LoginActivity.class));
+                startActivity(new Intent(mContext, MainActivity.class));
                 finish();
             }
         }, i * 1000);

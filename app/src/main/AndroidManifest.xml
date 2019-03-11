@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.scube.dms">
+    package="com.shoppingapp">
 
     <application
-        android:name=".DMS"
+        android:name="com.shoppingapp.Master"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -11,20 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SignUpActivity"
+            android:name="com.shoppingapp.SignUpActivity"
             android:label="@string/title_activity_sign_up"
             android:theme="@style/LoginTheme" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.shoppingapp.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.shoppingapp.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" />
         <activity
-            android:name=".SplashScreen"
+            android:name="com.shoppingapp.SplashScreen"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>

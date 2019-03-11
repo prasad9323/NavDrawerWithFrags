@@ -1,4 +1,4 @@
-package com.scube.dms.Fragments;
+package com.shoppingapp.Fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,17 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.scube.dms.R;
+import com.shoppingapp.R;
 
-public class Frag4 extends Fragment {
-    public Frag4() {
+public class Frag0 extends Fragment {
+    public Frag0() {
         // Required empty public constructor
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.frag_layout_4, container, false);
+        return inflater.inflate(R.layout.frag_layout_0, container, false);
     }
 
     @Override

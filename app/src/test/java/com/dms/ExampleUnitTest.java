@@ -1,4 +1,4 @@
-package com.scube.dms;
+package com.shoppingapp;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

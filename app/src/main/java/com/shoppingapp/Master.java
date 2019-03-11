@@ -1,10 +1,10 @@
-package com.scube.dms;
+package com.shoppingapp;
 import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
-public class DMS extends Application {
+public class Master extends Application {
     static Context mContext;
 
     public static Context getContext() {

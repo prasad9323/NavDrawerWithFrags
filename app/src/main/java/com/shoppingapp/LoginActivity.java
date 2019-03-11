@@ -1,4 +1,4 @@
-package com.scube.dms;
+package com.shoppingapp;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.shoppingapp.R;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    Context mContext = DMS.getContext();
+    Context mContext = Master.getContext();
     EditText etUsername, etPassword;
     View viewLogin, viewSignUp, root;
     TextView tvVersion, tvForgotPassword;
@@ -46,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * Set app version number on login screen
      */
     private void setUpVersionText() {
-        tvVersion.setText("VERSION " + DMS.getAppVersion());
+        tvVersion.setText("VERSION " + Master.getAppVersion());
     }
 
     /**

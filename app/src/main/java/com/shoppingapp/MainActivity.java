@@ -1,4 +1,4 @@
-package com.scube.dms;
+package com.shoppingapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,12 +18,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.scube.dms.Fragments.Frag0;
-import com.scube.dms.Fragments.Frag1;
-import com.scube.dms.Fragments.Frag2;
-import com.scube.dms.Fragments.Frag3;
-import com.scube.dms.Fragments.Frag4;
-import com.scube.dms.Fragments.Frag5;
+import com.shoppingapp.Fragments.Frag0;
+import com.shoppingapp.Fragments.Frag1;
+import com.shoppingapp.Fragments.Frag2;
+import com.shoppingapp.Fragments.Frag3;
+import com.shoppingapp.Fragments.Frag4;
+import com.shoppingapp.Fragments.Frag5;
+import com.shoppingapp.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
